@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Application Form</title>
+<style>
+    label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 5px;
+    vertical-align: top;
+    }
+    
+    textarea {
+    height: 50px;
+    }
+    .form-section {
+    margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Job Application Form</h1>
+
+<form action="#" method="post" enctype="multipart/form-data">
+<fieldset>
+    <legend>Personal Information</legend>
+    <label>First Name*</label><input type="text" name="first_name" required><br>
+    <label>Last Name*</label><input type="text" name="last_name" required><br>
+    <label>Date of Birth</label><input type="date" name="dob"><br>
+    <label>Gender</label>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female
+    <input type="radio" name="gender" value="other">Other<br>
+    <label>Profile Picture*</label><input type="file" name="profile_picture" accept="image/*" required><br>
+</fieldset>
+
+<fieldset>
+    <legend>Contact Information</legend>
+    <label>Email*</label><input type="email" name="email" required><br>
+    <label>Phone Number*</label><input type="text" name="phone" pattern="\d{10}" required placeholder="10-digit number"><br>
+    <label>Address</label><textarea name="address"></textarea><br>
+    <label>Country</label>
+    <select name="country">
+    <option value="India">India</option>
+    <option value="Other">Other</option>
+    </select>
+</fieldset>
+
+<fieldset>
+    <legend>Education Background</legend>
+    <label>Highest Qualification</label>
+    <select name="qualification">
+    <option>Graduate</option>
+    <option>Post-Graduate</option>
+    <option>Diploma</option>
+    <option>PhD</option>
+    </select><br>
+    <label>Specialization</label><input type="text" name="specialization"><br>
+    <label>Year of Graduation</label><input type="text" name="graduation_year">
+</fieldset>
+
+<fieldset>
+    <legend>Job Preferences</legend>
+    <label>Preferred Role</label><input type="text" name="preferred_role"><br>
+    <label>Expected Salary</label><input type="text" name="expected_salary"><br>
+    <label>Preferred Locations</label>
+    <input type="checkbox" name="location" value="Bangalore">Bangalore
+    <input type="checkbox" name="location" value="Delhi">Delhi
+    <input type="checkbox" name="location" value="Remote">Remote
+    <input type="checkbox" name="location" value="Pune">Pune<br>
+    <label>Willing to Relocate?</label>
+    <input type="checkbox" name="relocate">
+</fieldset>
+
+<fieldset>
+    <legend>Create Account</legend>
+    <label>Password*</label><input type="password" name="password" required minlength="6" placeholder="Min 6 characters"><br>
+    <label>Confirm Password*</label><input type="password" name="confirm_password" required>
+</fieldset>
+
+<fieldset>
+    <legend>Resume</legend>
+    <label>Upload Resume (PDF only)*</label><input type="file" name="resume" accept=".pdf" required>
+</fieldset>
+
+<fieldset>
+    <legend>Agreement</legend>
+    <input type="checkbox" name="terms" required> I agree to the terms and conditions*<br><br>
+    <input type="submit" value="Submit Application">
+    <input type="reset" value="Reset Form">
+</fieldset>
+</form>
+
+</body>
+</html>
